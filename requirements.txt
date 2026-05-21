@@ -1,0 +1,18 @@
+# Core rendering and UI dependencies
+Pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+opensimplex>=0.4.4
+pdfplumber>=0.10.0
+python-docx>=1.1.0
+img2pdf>=0.4.4
+gradio>=4.0.0
+tqdm>=4.66.0
+opencv-python>=4.8.0
+lxml>=4.9.0
+
+# Dataset/setup helper
+kaggle>=1.6.0
+
+# Note: torch is intentionally not pinned here because the correct wheel is
+# platform-specific, especially for the optional VATr++ neural backend.
