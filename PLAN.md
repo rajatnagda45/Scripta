@@ -25,12 +25,15 @@ than uniform random noise. Uniform random = detectable AI fingerprint.
 
 ## Hardware & Environment
 
-- **Machine**: HP Victus Gaming Laptop 15, Windows 11
-- **CPU**: Intel i5-13420H, **RAM**: 16GB
-- **GPU**: NVIDIA RTX 4050 Laptop, 6GB VRAM — VATr++ runs on CUDA here
-- **Python**: 3.10, **PyTorch**: 2.4.1+cu124 (CUDA 12.4)
-- **Shell**: bash (Git Bash on Windows — use Unix paths)
-- **Accounts**: GitHub (dev-sanidhya), HuggingFace, Kaggle
+- **Machine**: MacBook Air M2, macOS
+- **CPU**: Apple Silicon / Intel Mac
+- **RAM**: 8GB+ recommended
+- **GPU**: Apple MPS / CPU rendering
+- **Python**: 3.10 → 3.12
+- **PyTorch**: macOS-compatible build (optional for neural backend)
+- **Shell**: zsh
+- **IDE**: VS Code + Codex
+- **Accounts**: GitHub (rajatnagda45), HuggingFace, Kaggle
 
 ---
 
