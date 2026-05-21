@@ -1,6 +1,6 @@
 # Scripta — Living Build Plan
 
-> **New Claude session? Read this entire file before touching any code.**
+> **Read this entire file before touching any code.**
 > This is the single source of truth. Update it at the end of every session.
 
 ---
