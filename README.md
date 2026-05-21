@@ -1,78 +1,126 @@
-````md
-# Scripta
+<div align="center">
 
-> Transform plain text, PDFs, and DOCX files into realistic handwritten pages with AI-powered rendering pipelines.
+# ✍️ Scripta
 
-Scripta is a modular handwriting generation system designed to simulate authentic human writing on digital paper.  
-It combines procedural rendering, writer-style variation, artifact simulation, and optional neural synthesis into a single developer-friendly workflow.
+### AI-Powered Handwriting Generation System
+
+Transform plain text, PDFs, and DOCX files into realistic handwritten pages with modular rendering pipelines, writer-style simulation, and optional neural handwriting synthesis.
+
+<br>
+
+<img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
+<img src="https://img.shields.io/badge/Gradio-UI-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/PyTorch-Neural-red?style=for-the-badge&logo=pytorch" />
+<img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-black?style=for-the-badge" />
+
+<br><br>
+
+<img width="100%" alt="Scripta Preview" src="https://placehold.co/1200x600/0f172a/ffffff?text=Scripta+Preview" />
+
+</div>
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 🖋 Font Rendering Backend
-Fast handwriting generation using:
-- Caveat-based glyph rendering
-- `WriterState` behavioral variation engine
-- Baseline drift, spacing variation, and natural imperfections
-- Realistic paper + ink simulation
+## 🖋 Realistic Handwriting Rendering
 
-### 🧠 Neural Rendering Backend (Optional)
-Experimental VATr++ integration for:
-- Neural handwriting synthesis
-- Writer-conditioned generation
-- Human-like stroke flow and realism
-- IAM handwriting dataset support
+Generate believable handwritten pages using:
 
-### 📄 Multi-Format Input
-Supports:
+- Writer-style variation engine (`WriterState`)
+- Baseline drift & spacing variation
+- Ink simulation
+- Natural imperfections
+- Realistic paper rendering
+- PNG & PDF export
+
+---
+
+## 📄 Multi-Format Input Support
+
+Scripta supports:
+
 - Plain text
 - PDF documents
 - DOCX files
 
-### 🎨 Realistic Output
-Generate:
-- Ruled notebook pages
-- Multiple handwriting personalities
-- Blue/black ink styles
-- Scanned-paper aesthetics
-- Exportable PNG and PDF outputs
-
-### 🧩 Modular Architecture
-Built with isolated rendering layers:
-- Input parsing
-- Glyph rendering
-- Writer variation engine
-- Page composition
-- Artifact simulation
-- Gradio UI
+Perfect for:
+- assignments
+- notes
+- essays
+- study material
+- journals
+- handwritten mockups
 
 ---
 
-# 📸 Preview
+## 🎨 Handwriting Presets
 
-Scripta generates realistic handwritten documents like:
+Choose from multiple writer personalities:
 
-- Lecture notes
-- Assignments
-- Journal pages
-- Essays
-- Draft manuscripts
-- Study material
-
----
-
-# 🚀 Quick Start (macOS)
-
-## Recommended Environment
-
-- Python `3.10` → `3.12`
-- macOS (Apple Silicon supported)
-- Virtual environment recommended
+| Preset | Description |
+|---|---|
+| Casual · Loose | Relaxed notebook writing |
+| Neat · Compact | Clean organized writing |
+| Flowing · Cursive | Connected cursive flow |
+| Bold · Chunky | Thick expressive strokes |
+| Sharp · Angular | Technical sharp edges |
+| Relaxed · Bouncy | Rounded energetic motion |
+| Tight · Careful | Precise compact writing |
+| Free · Expressive | Loose dynamic handwriting |
 
 ---
 
-## 1. Clone the Repository
+## 🧠 Neural Backend (Optional)
+
+Experimental VATr++ integration enables:
+
+- Neural handwriting synthesis
+- Writer-conditioned generation
+- Human-like stroke realism
+- IAM handwriting dataset support
+- Learned handwriting behavior
+
+---
+
+# 🏗 Architecture
+
+```text
+Input Parsing
+      ↓
+WriterState Variation Engine
+      ↓
+Glyph / Neural Rendering
+      ↓
+Page Composition
+      ↓
+Artifact Simulation
+      ↓
+PNG / PDF Export
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+scripta/
+├── input_handler.py
+├── glyph_store.py
+├── variation_engine.py
+├── renderer.py
+├── page_compositor.py
+├── neural_renderer.py
+├── neural_page_compositor.py
+└── artifact_sim.py
+```
+
+---
+
+# 🚀 Quick Start
+
+## 1. Clone Repository
 
 ```bash
 git clone <YOUR_REPO_URL>
@@ -99,7 +147,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Download Required Fonts
+## 4. Download Fonts
 
 ```bash
 mkdir -p fonts
@@ -113,16 +161,15 @@ curl -L https://raw.githubusercontent.com/googlefonts/caveat/main/fonts/ttf/Cave
 
 ---
 
-# ▶️ Running Scripta
+# ▶️ Run Scripta
 
-## Launch the Web App
+## Launch Web App
 
 ```bash
-source .venv/bin/activate
 python app.py
 ```
 
-Open in browser:
+Open:
 
 ```text
 http://127.0.0.1:7860
@@ -140,9 +187,9 @@ python main.py \
 
 ---
 
-# ⚙️ Configuration
+# ⚙️ Environment Variables
 
-Optional environment variables:
+Optional configuration:
 
 ```bash
 export GRADIO_SERVER_NAME=127.0.0.1
@@ -151,28 +198,11 @@ export GRADIO_SERVER_PORT=7860
 
 ---
 
-# 🖌 Handwriting Presets
+# 🧠 Neural Backend Setup
 
-Scripta includes multiple handwriting personalities:
+> Optional advanced setup for VATr++ neural handwriting synthesis.
 
-| Preset | Style |
-|---|---|
-| Casual · Loose | Relaxed notebook writing |
-| Neat · Compact | Organized clean handwriting |
-| Flowing · Cursive | Connected flowing strokes |
-| Bold · Chunky | Thick expressive letters |
-| Sharp · Angular | Technical sharp edges |
-| Relaxed · Bouncy | Rounded playful motion |
-| Tight · Careful | Precise compact writing |
-| Free · Expressive | Loose energetic writing |
-
----
-
-# 🧠 Neural Backend Setup (Optional)
-
-The neural rendering pipeline is intentionally separated from the lightweight font backend.
-
-## 1. Clone VATr++
+## Clone VATr++
 
 ```bash
 git clone https://github.com/EDM-Research/VATr-pp.git VATr-pp
@@ -180,7 +210,7 @@ git clone https://github.com/EDM-Research/VATr-pp.git VATr-pp
 
 ---
 
-## 2. Install VATr++ Dependencies
+## Install VATr++ Dependencies
 
 ```bash
 cd VATr-pp
@@ -191,9 +221,7 @@ pip install msgpack wandb
 
 ---
 
-## 3. Add Model Weights
-
-Required files:
+## Required Model Files
 
 ```text
 VATr-pp/files/vatrpp.pth
@@ -202,9 +230,7 @@ VATr-pp/files/resnet_18_pretrained.pth
 
 ---
 
-## 4. Add IAM Dataset
-
-Expected structure:
+## IAM Dataset Structure
 
 ```text
 data/iam/data_subset/data_subset/*.png
@@ -212,23 +238,15 @@ data/iam/data_subset/data_subset/*.png
 
 ---
 
-## 5. Prepare Style Samples
-
-Run from the Scripta root:
+## Prepare Style Samples
 
 ```bash
-source .venv/bin/activate
 python scripts/prep_style_samples.py
 ```
 
-This generates:
-- segmented writer samples
-- word-level handwriting crops
-- neural conditioning assets
-
 ---
 
-## 6. Run Neural Rendering
+## Run Neural Rendering
 
 ```bash
 python main.py \
@@ -239,32 +257,23 @@ python main.py \
 
 ---
 
-# 🏗 Project Architecture
+# 🛠 Tech Stack
 
-```text
-Input → WriterState → Renderer → Page Composer
-      → Artifact Simulation → Export
-```
-
-Core modules:
-
-```text
-scripta/
-├── input_handler.py
-├── glyph_store.py
-├── variation_engine.py
-├── renderer.py
-├── page_compositor.py
-├── neural_renderer.py
-├── neural_page_compositor.py
-└── artifact_sim.py
-```
+| Category | Technology |
+|---|---|
+| Language | Python |
+| UI | Gradio |
+| Rendering | Pillow, OpenCV |
+| AI | PyTorch |
+| Neural Synthesis | VATr++ |
+| Dataset | IAM Handwriting |
+| Processing | NumPy |
 
 ---
 
-# 📂 Runtime Directories
+# 📦 Runtime Directories
 
-These folders are automatically created when needed:
+Automatically created when needed:
 
 ```text
 output/
@@ -275,56 +284,48 @@ data/iam/
 
 ---
 
-# 🛠 Tech Stack
-
-- Python
-- Pillow
-- OpenCV
-- NumPy
-- PyTorch
-- Gradio
-- VATr++
-- IAM Handwriting Dataset
-
----
-
 # ⚠️ Notes
 
-- Font backend works independently without neural dependencies.
-- Neural backend requires external assets and model weights.
-- Missing dependencies produce clear setup guidance instead of deep tracebacks.
-- Apple Silicon users can optionally enable PyTorch MPS acceleration.
+- Font backend works independently.
+- Neural backend is optional.
+- Missing assets produce friendly setup errors.
+- Apple Silicon supported through PyTorch MPS.
+- Designed for modular experimentation and extensibility.
 
 ---
 
 # 📌 Current Status
 
-### Stable
+## Stable
+
 - Font rendering pipeline
-- UI generation flow
-- WriterState variation engine
+- UI rendering flow
+- WriterState engine
 - Paper + ink simulation
 - PNG/PDF export
 
-### Experimental
+## Experimental
+
 - VATr++ neural synthesis
-- IAM style conditioning
 - Neural writer cloning
-
----
-
-# 📜 License
-
-MIT License
+- IAM style conditioning
 
 ---
 
 # 💡 Vision
 
-Scripta aims to become a fully modular AI handwriting synthesis platform for:
+Scripta aims to become a modular AI handwriting synthesis platform for:
+
 - digital note generation
 - educational tooling
-- synthetic handwriting research
 - document realism pipelines
+- synthetic handwriting research
 - AI-assisted writing workflows
-````
+
+---
+
+<div align="center">
+
+### Built with ❤️ using Python, Gradio, and AI rendering pipelines.
+
+</div>
