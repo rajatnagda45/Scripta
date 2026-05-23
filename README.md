@@ -72,7 +72,7 @@ Choose from multiple writer personalities:
 
 ---
 
-## 🧠 Neural Backend (Optional)
+## 🧠 Neural Backend 
 
 Experimental VATr++ integration enables:
 
